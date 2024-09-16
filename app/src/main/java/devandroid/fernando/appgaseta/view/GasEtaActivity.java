@@ -54,7 +54,7 @@ public class GasEtaActivity extends AppCompatActivity {
 
                 boolean isDadosOk = true;
 
-                if(TextUtils.isEmpty(editGasolina.getText())){
+                if (TextUtils.isEmpty(editGasolina.getText())) {
                     editGasolina.setError("*Obrigatorio");
                     editGasolina.requestFocus();
                     isDadosOk = false;
@@ -67,15 +67,15 @@ public class GasEtaActivity extends AppCompatActivity {
 
                 }
 
-                if(isDadosOk){
+                if (isDadosOk) {
                     precoGasolina = Double.parseDouble(editGasolina.getText().toString());
                     precoEtanol = Double.parseDouble(editEtanol.getText().toString());
 
-                    recomendacao = UtilGasEta.calcularMelhorOpcao(precoGasolina,precoEtanol);
+                    recomendacao = UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol);
 
                     txtResultado.setText(recomendacao);
 
-                }else {
+                } else {
                     Toast.makeText(GasEtaActivity.this,
                             "Preencha os campos obrigatorios !!!",
                             Toast.LENGTH_LONG).show();
