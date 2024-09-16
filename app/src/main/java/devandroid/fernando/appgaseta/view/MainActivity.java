@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
         editSobrenome = findViewById(R.id.editSobrenome);
-        editCurso = findViewById(R.id.editCurso);
-        editTelefone = findViewById(R.id.editTelefone);
 
         spinner = findViewById(R.id.spinner);
 

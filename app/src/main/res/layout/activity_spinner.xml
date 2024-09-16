@@ -37,7 +37,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:ems="10"
-                android:hint="@string/txt_hint_edit_primeiro_nome"
+                android:hint="@string/txt_hint_edit_gasolina"
                 android:importantForAutofill="no"
                 android:inputType="text" />
 
@@ -48,34 +48,10 @@
                 android:layout_margin="16dp"
                 android:layout_marginTop="16dp"
                 android:ems="10"
-                android:hint="@string/txt_edit_sobrenome"
+                android:hint="@string/txt_edit_etanol"
                 android:importantForAutofill="no"
                 android:inputType="text" />
 
-            <EditText
-                android:id="@+id/editCurso"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:hint="@string/txt_hint_edit_nome_curso"
-                android:importantForAutofill="no"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/editTelefone"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:hint="@string/txt_hint_edit_telefone"
-                android:importantForAutofill="no"
-                android:inputType="text" />
 
             <TextView
                 android:id="@+id/txtSpinner"
@@ -85,7 +61,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/txt_selecione_um_curso"
+                android:text="@string/txt_resultado"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
