@@ -53,6 +53,8 @@ public class GasEtaActivity extends AppCompatActivity {
 
         dados = controller.getListaDeDados();
 
+        //TODO:Remover os teste feitos para o banco de dados
+
         /*Combustivel objAlteracao = dados.get(1);
         objAlteracao.setNomeDoCombustivel("TESTE");
         objAlteracao.setPrecoDoCombustivel(5.97);

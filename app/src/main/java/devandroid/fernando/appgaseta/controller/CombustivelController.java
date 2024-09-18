@@ -34,12 +34,12 @@ public class CombustivelController extends GasEtaDB {
         dadosPreferences.putString("Recomendacao", combustivel.getRecomendacao());
         dadosPreferences.apply();
 
-        dados.put("nomeDoCombustivel",combustivel.getNomeDoCombustivel());
-        dados.put("precoDoCombustivel",combustivel.getPrecoDoCombustivel());
-        dados.put("recomendacao",combustivel.getRecomendacao());
+        dados.put("nomeDoCombustivel", combustivel.getNomeDoCombustivel());
+        dados.put("precoDoCombustivel", combustivel.getPrecoDoCombustivel());
+        dados.put("recomendacao", combustivel.getRecomendacao());
 
 
-        salvarObjeto("Combustivel",dados);
+        salvarObjeto("Combustivel", dados);
     }
 
     public void limpar() {
@@ -47,27 +47,27 @@ public class CombustivelController extends GasEtaDB {
         dadosPreferences.apply();
     }
 
-    public List<Combustivel> getListaDeDados(){
+    public List<Combustivel> getListaDeDados() {
 
         return listarDados();
     }
 
-    public void alterar(Combustivel combustivel){
+    public void alterar(Combustivel combustivel) {
 
         ContentValues dados = new ContentValues();
 
-        dados.put("id",combustivel.getId());
-        dados.put("nomeDoCombustivel",combustivel.getNomeDoCombustivel());
-        dados.put("precoDoCombustivel",combustivel.getPrecoDoCombustivel());
-        dados.put("recomendacao",combustivel.getRecomendacao());
+        dados.put("id", combustivel.getId());
+        dados.put("nomeDoCombustivel", combustivel.getNomeDoCombustivel());
+        dados.put("precoDoCombustivel", combustivel.getPrecoDoCombustivel());
+        dados.put("recomendacao", combustivel.getRecomendacao());
 
-        alterarObjeto("Combustivel",dados);
+        alterarObjeto("Combustivel", dados);
 
     }
 
-    public void deletar (int id){
+    public void deletar(int id) {
 
-        deletarObjeto("Combustivel",id);
+        deletarObjeto("Combustivel", id);
 
     }
 }

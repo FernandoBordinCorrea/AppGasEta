@@ -16,7 +16,7 @@ import devandroid.fernando.appgaseta.model.Combustivel;
 public class GasEtaDB extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "gaseta.db";
-    private static final int  DB_VERSION = 1;
+    private static final int DB_VERSION = 1;
 
     Cursor cursor;
 
@@ -24,7 +24,7 @@ public class GasEtaDB extends SQLiteOpenHelper {
 
 
     public GasEtaDB(Context context) {
-        super(context, DB_NAME,null, DB_VERSION);
+        super(context, DB_NAME, null, DB_VERSION);
 
         db = getWritableDatabase();
     }
@@ -47,11 +47,11 @@ public class GasEtaDB extends SQLiteOpenHelper {
 
     }
 
-    public void salvarObjeto(String tabela, ContentValues dados){
-        db.insert(tabela,null,dados);
+    public void salvarObjeto(String tabela, ContentValues dados) {
+        db.insert(tabela, null, dados);
     }
 
-    public List<Combustivel> listarDados(){
+    public List<Combustivel> listarDados() {
 
         List<Combustivel> lista = new ArrayList<>();
 
@@ -59,9 +59,9 @@ public class GasEtaDB extends SQLiteOpenHelper {
 
         String querySQL = "SELECT * FROM Combustivel";
 
-        cursor = db.rawQuery(querySQL,null);
+        cursor = db.rawQuery(querySQL, null);
 
-        if (cursor.moveToFirst()){
+        if (cursor.moveToFirst()) {
             do {
 
                 registro = new Combustivel();
@@ -72,8 +72,8 @@ public class GasEtaDB extends SQLiteOpenHelper {
 
                 lista.add(registro);
 
-            }while (cursor.moveToNext());
-        }else {
+            } while (cursor.moveToNext());
+        } else {
 
         }
 
@@ -81,20 +81,19 @@ public class GasEtaDB extends SQLiteOpenHelper {
 
     }
 
-    public void alterarObjeto(String tabela, ContentValues dados){
+    public void alterarObjeto(String tabela, ContentValues dados) {
 
         int id = dados.getAsInteger("id");
 
-        db.update(tabela,dados,"id=?",
+        db.update(tabela, dados, "id=?",
                 new String[]{Integer.toString(id)});
 
     }
 
-    public void deletarObjeto(String tabela, int id){
+    public void deletarObjeto(String tabela, int id) {
 
 
-
-        db.delete(tabela,"id=?",
+        db.delete(tabela, "id=?",
                 new String[]{Integer.toString(id)});
 
     }
